@@ -4,16 +4,16 @@ from ultralytics import YOLO
 import cv2
 
 
-# Load the exported ONNX model
+#Load the exported ONNX model
 onnx_model = YOLO("yolo11n.onnx")
 
-# Classes to keep
+#Classes to keep
 allowed_classes = {
     "person", "bicycle", "motorcycle", "cat", "dog", "horse",
     "sheep", "cow", "elephant", "bear", "zebra", "giraffe"
 }
 
-# Initialize camera
+#Initialize camera
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
